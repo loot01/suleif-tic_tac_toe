@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,600;1,700&display=swap");
+
+html {
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+@layer components {
+  body {
+    @apply m-0 p-0 bg-blueGray-600;
+  }
+  .game-grid {
+    @apply m-2 grid grid-cols-3 text-center bg-coolGray-700 justify-items-center rounded w-3/4 mx-auto p-2 md:w-1/2 lg:w-2/5;
+  }
+  .game-btn {
+    @apply text-2xl sm:text-3xl bg-gray-400 border-gray-600 border rounded my-2 p-2 w-12 h-12 text-center sm:w-14 sm:h-14 lg:w-16 lg:h-16 outline-none focus:outline-none hover:bg-gray-500 
+    active:bg-gray-600  transition-all;
+  }
+  .btn {
+    @apply border-none px-2 py-1 rounded m-1 bg-gray-500 text-white hover:bg-gray-600 transition-colors focus:outline-none;
+  }
+  .btn-alert {
+    @apply bg-red-500 hover:bg-red-600;
+  }
+  .game-end-popup {
+    @apply bg-trueGray-600 p-2 text-center h-full w-full z-10 absolute -bottom-1/2 flex justify-center bg-opacity-75 items-center transition-all;
+    transform: translateY(-50%);
+  }
+  .game-end-modal {
+    @apply bg-gray-300 p-2 rounded;
+  }
+  .game-end-modal h1 {
+    @apply text-xl;
+  }
+  .hidden-away {
+    @apply opacity-0;
+    z-index: -1;
+  }
+}
