@@ -7,14 +7,15 @@
 html {
   font-size: 30px;
   font-family: "Poppins", sans-serif;
+  min-height: 100vh;
 }
 
 @layer components {
   body {
-    @apply m-0 p-0 bg-blueGray-600;
+    @apply m-0 p-0 bg-blueGray-600 h-screen;
   }
   .game-grid {
-    @apply m-2 grid grid-cols-3 text-center bg-coolGray-700 justify-items-center rounded w-3/4 mx-auto p-2 md:w-1/2 lg:w-2/5;
+    @apply grid grid-cols-3 text-center bg-coolGray-700 justify-items-center rounded w-3/4 mx-auto p-2 md:w-1/2 lg:w-2/5;
   }
   .game-btn {
     @apply text-2xl sm:text-3xl bg-gray-400 border-gray-600 border rounded my-2 p-2 w-12 h-12 text-center sm:w-14 sm:h-14 lg:w-16 lg:h-16 outline-none focus:outline-none hover:bg-gray-500 
